@@ -7,39 +7,46 @@ body {
 }
 
 svg {
-  width: 33.32%;
-  float: left;
+  /*width: 33.32%;
+  float: left;*/
 }
 
-.gear-bg,
-.hammer-bg,
-.heart-bg{
-	transition: .3s ease-out;
+.gear-icon,
+.hammer-icon,
+.heart-icon{
+	transform-origin: 50% 50%;/*obligatorio ponerlo para que se centre*/
 }
+
 
 /* --------------------------
   GEAR = engranaje
 --------------------------- */
+.gear-icon{
+	transition: transform .4s ease-out;
+}
 
-.gear-bg:hover{
-	fill: #3881cc;
+.gear:hover .gear-icon{
+	transform: rotate(45deg) scale(1.3);
 }
 
 /* --------------------------
   HAMMER = martillo
 --------------------------- */
-.hammer-bg{
-	stroke: #fee16e;
+.hammer:hover .hammer-icon{
+	transform: rotate(45deg);
 }
-.hammer-bg:hover {
-	fill: #feae6e;
-	stroke-width: 8;
+
+.hammer-icon{
+	transition: transform .3s ease-out;
 }
 
 /* --------------------------
   HEART = corazón
 --------------------------- */
+.heart:hover .heart-icon{
+	transform: scale(1.3);
+}
 
-.heart-bg:hover {
-	fill: #ff5e5e;
+.heart-icon{
+	transition: transform .2s ease-out;
 }
